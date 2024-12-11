@@ -10,7 +10,7 @@ router.put("/comment/:id", update);
 router.delete("/comment/:id", deletee);
 router.get("/comment/:id", get_comment);
 router.get("/comments", get_comments);
-router.get("/comment/reply/:id", get_comment_parent);
+router.get("/comment/:id/reply", get_comment_parent);
 
 
 

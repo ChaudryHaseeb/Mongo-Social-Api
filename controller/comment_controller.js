@@ -11,9 +11,7 @@ const Comment = require("../model/Comment");
 
 
 const create = expressAsyncHandler(async (req, res) => {
-    console.log("toop-=-----------------")
-
-    const {comment_text, parent_comment_id } = req.body;
+    const {comment_text, parent_comment_id, user_id, post_id } = req.body;
 
     if (!comment_text) {
       res.status(400);
@@ -21,8 +19,8 @@ const create = expressAsyncHandler(async (req, res) => {
     };
 
     const comments = await Comment.create({
-        user_id: "675815c4b6b7cc125cd67b74",
-        post_id: "67583043590c4e9838caa8a1",
+        user_id: user_id || "675815c4b6b7cc125cd67b74",
+        post_id: post_id || "67583043590c4e9838caa8a1",
         comment_text,
         parent_comment_id,
     });

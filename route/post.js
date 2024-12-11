@@ -10,7 +10,7 @@ router.put("/post/:id", update);
 router.delete("/post/:id", deletee);
 router.get("/post/:id", get_post);
 router.get("/posts", get_posts);
-router.get("/post/comment/:id", get_post_comment);
+router.get("/post/:id/comment", get_post_comment);
 
 
 

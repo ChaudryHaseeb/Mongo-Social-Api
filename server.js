@@ -12,6 +12,7 @@ app.use(express.json());
 app.use("/api", require("./route/user"));
 app.use("/api", require("./route/post"));
 app.use("/api", require("./route/comment"));
+app.use("/api", require("./route/like"));
 app.use(errorHandler);
 connectDb();
 
