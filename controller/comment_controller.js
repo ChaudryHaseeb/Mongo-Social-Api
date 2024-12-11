@@ -24,7 +24,6 @@ const create = expressAsyncHandler(async (req, res) => {
         comment_text,
         parent_comment_id,
     });
-    console.log("&&&&&&&&&&&&&&",comments)
     res.status(200).json({message: "Comment Post Succesfully!", comments});
 
 })
@@ -40,10 +39,8 @@ const create = expressAsyncHandler(async (req, res) => {
 
 
 const update = expressAsyncHandler(async (req, res) => {
-    console.log("toop-=-----------------")
     const { id } = req.params;
     const { comment_text } = req.body;
-    console.log("----------",comment_text)
 
     const Comments = await Comment.findById(id);
     if (!Comments) {

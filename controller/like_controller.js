@@ -104,7 +104,6 @@ const get_likes = expressAsyncHandler(async (req, res) => {
 
 
 const get_post_like = expressAsyncHandler(async (req, res) => {
-    console.log("oooooooooo")
     const { id } = req.params;
     const {type} = req.body;
     if (!type) {
